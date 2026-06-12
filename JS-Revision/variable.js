@@ -237,5 +237,46 @@ console.log(typeof NaN);
 function isReallyNaN(value) {
   return value !== value;
 }
-console.log(isReallyNaN(NaN));
-console.log(isReallyNaN(5));
+// console.log(isReallyNaN(NaN));
+// console.log(isReallyNaN(5));
+
+// console.log(typeof(NaN));
+
+if([]){
+    console.log("hh")
+}
+
+if({}){
+    console.log(22)
+}
+
+if(0){
+    console.log(3333333)
+}
+if(-3){
+    console.log(444444)
+}
+
+if(4){
+    console.log(55555)
+}
+
+if(""){
+    console.log(666666666)
+}
+if("hii"){
+    console.log(777777777)
+}
+if(function(){}){
+    console.log(888888888)
+}
+
+console.log({});
+console.log([]);
+console.log(0);
+console.log(-3)
+console.log(5)
+console.log("");
+console.log("sdf");
+console.log(function(){});
+console.log(false)
