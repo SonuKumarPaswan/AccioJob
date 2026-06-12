@@ -242,41 +242,63 @@ function isReallyNaN(value) {
 
 // console.log(typeof(NaN));
 
-if([]){
-    console.log("hh")
+if ([]) {
+  console.log("hh");
 }
 
-if({}){
-    console.log(22)
+if ({}) {
+  console.log(22);
 }
 
-if(0){
-    console.log(3333333)
+if (0) {
+  console.log(3333333);
 }
-if(-3){
-    console.log(444444)
-}
-
-if(4){
-    console.log(55555)
+if (-3) {
+  console.log(444444);
 }
 
-if(""){
-    console.log(666666666)
+if (4) {
+  console.log(55555);
 }
-if("hii"){
-    console.log(777777777)
+
+if ("") {
+  console.log(666666666);
 }
-if(function(){}){
-    console.log(888888888)
+if ("hii") {
+  console.log(777777777);
+}
+if (function () {}) {
+  console.log(888888888);
 }
 
 console.log({});
 console.log([]);
 console.log(0);
-console.log(-3)
-console.log(5)
+console.log(-3);
+console.log(5);
 console.log("");
 console.log("sdf");
-console.log(function(){});
-console.log(false)
+console.log(function () {});
+console.log(false);
+
+console.log("==============================================================");
+
+function great(name) {
+  name = name || "Geast";
+  console.log("Hello" + name);
+}
+
+great("John");
+great("");
+great();
+
+console.log(Boolean(0))
+console.log(Boolean(''))
+console.log(Boolean("hello"))
+console.log(Boolean([]))
+
+console.log("==========================")
+
+console.log(!!0)
+console.log(!![])
+console.log(!!"hello")
