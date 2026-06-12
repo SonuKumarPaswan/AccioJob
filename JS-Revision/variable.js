@@ -192,7 +192,7 @@ function login(userData){
 function logout(){
     user=null;
 }
-    *************************/ /////
+    *************************/ /* /////
 
 console.log(0 / 0);
 console.log(Math.sqrt(-3));
@@ -210,7 +210,10 @@ console.log(isNaN(undefined))
 console.log(isNaN("24dsf"))
 console.log(isNaN(23))
 
-// ===============================
+
+*/
+
+/*===============================
 console.log("------------------------------------------------");
 console.log(Number.isNaN(NaN));
 console.log(Number.isNaN('hello'));
@@ -228,3 +231,11 @@ console.log(isReallyNaN(NaN)) // true
 console.log(isReallyNaN(5))  // false
 
 console.log(typeof NaN);
+
+*/ //////////////////////////////
+
+function isReallyNaN(value) {
+  return value !== value;
+}
+console.log(isReallyNaN(NaN));
+console.log(isReallyNaN(5));
