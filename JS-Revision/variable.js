@@ -302,3 +302,17 @@ console.log("==========================")
 console.log(!!0)
 console.log(!![])
 console.log(!!"hello")
+console.log("-----------------------------")
+
+function myFuntion() {
+  console.log(functionVar)
+  var functionVar=10;
+  // console.log(functionLet)
+  let functionLet=20;
+  console.log(functionVar)
+  console.log(functionLet)  
+}
+myFuntion();
+
+// console.log(functionVar)
+// console.log(functionLet)
