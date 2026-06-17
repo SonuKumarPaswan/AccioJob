@@ -232,7 +232,9 @@ console.log(isReallyNaN(5))  // false
 
 console.log(typeof NaN);
 
-*/ //////////////////////////////
+*/ /////////////////////////////
+
+/*
 
 function isReallyNaN(value) {
   return value !== value;
@@ -314,5 +316,145 @@ function myFuntion() {
 }
 myFuntion();
 
-// console.log(functionVar)
-// console.log(functionLet)
+// console.log(functionVar)  // Error
+// console.log(functionLet) // Error 
+
+// Block scop ---------------------------------------
+
+
+console.log("-------------------- Block Scop ---------------------")
+
+if(true){
+
+  var blockVar=10;
+  // console.log(blockLet) // Error
+  let blockLet=20;
+  // console.log(blockConst) // Error
+  const blockConst=30;
+
+  console.log(blockVar)
+  console.log(blockLet)
+  console.log(blockConst)
+
+}
+
+// Access the  variable outside of Block
+
+console.log(blockVar)
+// console.log(blockConst)
+// console.log(blockLet)
+
+console.log("-------------------------------")
+
+// for(var i=1; i<3; i++){
+//   console.log(i);
+// }
+// console.log(i)
+
+console.log("--------- let has function scop -------------")
+
+for(let i=1; i<3 ; i++){
+  console.log(i);
+}
+// console.log(i)
+
+
+*//////////////////////////////////////////
+
+//  Nested Function Scope -----------
+
+// var global=10;
+
+// function outer(){
+//   var outerVar=20;
+//    function inner(){
+//      var innerVar=30;
+//      console.log(global)
+//      console.log(outerVar)
+//      console.log(innerVar)
+//    }
+  //  inner();
+  //  console.log(innerVar) // ReferenceError : innerVar is not defined 
+// }
+// outer();
+// inner(); // cann't call inner function outside of outer function 
+// console.log(outerVar) // ReferenceError : ounterVar is not defined 
+// console.log(global);
+
+//  For let function scope ---------------------
+
+
+// function outer(){
+//   let  outerLet=40
+//   function inner(){
+//     let innerLet=20;
+//     console.log(outerLet)
+//     console.log(innerLet)
+//   }
+//   inner();
+// }
+// outer();
+
+// let name="GLobal"
+
+// function first(){
+//   let name="First";
+//   second();
+// }
+
+// function second(){
+//   console.log(name);
+// }
+// first();
+/*
+"use strict"
+
+console.log(this)
+
+function globalFuntion(){
+  console.log(this);
+}
+
+globalFuntion();
+
+const person = {
+  name: 'John',
+  greet: function() {
+    console.log(this.name); // 'this' is person object
+  }
+};
+
+person.greet(); // 'John'
+
+*///////////
+
+
+// let name="sonu";
+// // console.log(window.name);
+// // console.log(a);
+// function functionScoped() {
+//   let a=10;
+//   console.log(a)
+// }
+// console.log(window.name);// nothing is print because let are hoisted but not initialized and window not create property for window object
+
+// functionScoped();
+
+
+// console.log(a);
+// let a=10;
+
+// const user={
+//   name:"sonu",
+// }
+// user.age=23
+// console.log(user);
+
+// {
+//   let x=10;
+// }
+
+let nam="sonu";
+console.log(window.nam);
+let a=20;
+console.log(window.a)
